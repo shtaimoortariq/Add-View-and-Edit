@@ -1,0 +1,42 @@
+<div ng-controller="EditController as edit">
+
+    <div layout-margin layout="row" layout-align="center center">
+        <div flex-gt-sm="50" class="md-whiteframe-18dp" layout="column" layout-margin>
+            <div flex-gt-sm="40" class="md-whiteframe-20dp" layout="column">
+
+                <md-input-container>
+                    <label>Name</label>
+                    <md-icon md-svg-src="./img/icons/ic_person_24px.svg" class="name"></md-icon>
+                    <input ng-model="edit.name" type="text"/>
+
+                </md-input-container>
+
+
+                <md-input-container>
+
+                    <md-icon md-svg-src="./img/icons/ic_phone_48px.svg"></md-icon>
+                    <input ng-model="edit.phone" type="number" placeholder="Phone Number"/>
+
+                </md-input-container>
+
+
+                <md-input-container>
+                    <!-- Use floating placeholder instead of label -->
+                    <md-icon md-svg-src="./img/icons/ic_email_24px.svg" class="email"></md-icon>
+                    <input ng-model="edit.email" type="email" placeholder="Email"/>
+                </md-input-container>
+
+
+                <md-input-container>
+                    <md-icon md-svg-src="./img/icons/ic_location_on_24px.svg" style="display:inline-block;"></md-icon>
+                    <input ng-model="edit.address" type="text" placeholder="Address"/>
+                </md-input-container>
+                <md-button class="md-raised md-primary" ng-click="edit.submit()">Save</md-button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
