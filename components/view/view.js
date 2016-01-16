@@ -2,7 +2,7 @@
  * Created by Taimoor on 6/30/2015.
  */
 
-var app=angular.module('app.view',['ngNewRouter','ngMaterial','firebase'])
+var app=angular.module('app.view',['firebase'])
     .controller('ViewController', function ($firebaseArray, $location) {
         var ref = new Firebase("https://saveadata.firebaseio.com/saveadata/data");
         this.binding = [];

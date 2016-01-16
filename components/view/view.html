@@ -3,22 +3,36 @@
         <input type="text" placeholder="Search" ng-model="view.searchText" style="width: 500px"/>
     </md-input-container>
 
-    <div layout=""></div>
+    <div layout="row" layout-align="center center">
 
+        <div flex-gt-sm="60" layout-margin class="md-whiteframe-10dp">
 
-    <div class="md-whiteframe-5dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
-        <span>.md-whiteframe-1dp</span>
+            <div layout="row" layout-wrap>
+
+                <div ng-repeat="msg in view.binding | filter:view.searchText" class="md-whiteframe-2dp"
+                     style="width: 300px" layout="column" layout-align="center center" layout-margin>
+                    <md-toolbar layout-align="center center">
+                        <span> {{msg.name}} </span>
+                        <span>
+                        <ng-md-icon icon="delete" style="fill:black" size="20"
+                                    ng-click="view.binding.$remove(msg)"></ng-md-icon>
+                        <ng-md-icon icon="edit" style="fill:black" size="20" ng-click="view.edit(msg.$id)"></ng-md-icon>
+                       </span>
+                    </md-toolbar>
+
+                    <p>{{msg.phone}}</p>
+
+                    <md-divider></md-divider>
+                    <p>{{msg.email}}</p>
+                    <md-divider></md-divider>
+                    <p>{{msg.address}}</p>
+                    <md-divider></md-divider>
+                </div>
+
+            </div>
+        </div>
     </div>
-
-
 </div>
-
-
-
-
-
-
-
 
 
 <!--
